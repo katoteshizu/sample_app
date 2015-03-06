@@ -32,8 +32,12 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard 'rspec', all_after_pass: false, cmd: 'rspec --drb' do
+# guard 'rspec', all_after_pass: false, cmd: "bundle exec rspec" do
 # guard :rspec, all_after_pass: false, cli: '--drb', cmd: "bundle exec rspec" do
+# guard 'rspec', after_all_pass: false, cli: '--drb' do
+
+guard 'rspec', all_after_pass: false, cmd: 'rspec --drb' do
+
 # require 'active_support/inflector'
 require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
