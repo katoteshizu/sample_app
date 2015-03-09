@@ -38,7 +38,7 @@
 
 guard 'rspec', all_after_pass: false, cmd: 'rspec --drb' do
 
-# require 'active_support/inflector'
+require 'active_support/inflector'
 require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
